@@ -1,0 +1,80 @@
+:root {
+--border-color: #fff; 
+--background-color: #3d3d3d;
+--text-color-default: rgba(243, 109, 248, 0.753);  
+--header-text-size: 24px;  
+--header-text-weight: bold;
+}
+
+body {
+    margin-right: -10px;
+    background-color: var(--background-color);
+    color: var(--text-color-default);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    text-align: center;
+    font-weight: var(--header-text-weight);
+    font-size: var(--header-text-size)
+}
+
+header p {
+    color: #fff;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+section {
+    flex: 1 1 25%;
+    border: 2px dotted var(--border-color);
+    margin-right: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+    align-items:auto;
+}
+
+section header {
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    margin-top: -20px;
+    background-color: var(--background-color);
+    font-size: var(--header-text-size);
+    font-weight: var(--header-text-weight);
+    
+}
+
+pre {
+    background-image: linear-gradient(
+        rgba(232, 102, 236, 0.3) 0%,
+        rgba(232, 102, 236, 0.6) 100%
+    );
+    user-select: all;
+    transition: border 1s;
+    color:#fff;
+}
+
+pre:hover {
+   border: 5px solid var(--border-color);
+}
+
+section > p {
+    color: var(--text-color-default);
+}
+
+h3 {
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    header, main {
+        display: flex;
+        flex-direction: column;
+    }
+}
